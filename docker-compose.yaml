@@ -1,0 +1,26 @@
+services:
+  aims-scheduler:
+    image: harbor.solumesl.com/schwarz-it/lidl/aims-scheduler:0.0.1-SNAPSHOT
+    ports:
+      - 8089:8080
+    environment:
+      - server.servlet.context-path=/scheduler
+      - spring.scheduler.datasource.jdbc-url=jdbc:postgresql://20.79.215.223:5432/AIMS_SCHEDULER
+      - spring.scheduler.datasource.username=aims_system
+      - spring.scheduler.datasource.password=aims_system
+      - spring.label.datasource.jdbc-url=jdbc:postgresql://20.79.215.223:5432/AIMS_SYSTEM_AIMS_CORE_DB
+      - spring.label.datasource.username=aims_system
+      - spring.label.datasource.password=aims_system
+      - aims.baseurl=https://aims-lidl-staging.k8s.de.solumesl.com
+      - aims.api.key=NsKQvyOF.zguBCKAfwFCLBgXXXXXmAJebJVZaRxy
+      - spring.mail.host=smtp.office365.com
+      - spring.mail.port=587
+      - spring.mail.username=redmine@solumesl.com
+      - spring.mail.password=SoluM1!2020
+      - spring.mail.properties.mail.smtp.auth=true
+      - spring.mail.properties.mail.smtp.starttls.enable=true
+      - spring.rabbitmq.host=20.113.22.32
+      - spring.rabbitmq.username=aims
+      - spring.rabbitmq.password=aims-admin-jr89031hf83
+      - spring.rabbitmq.virtual-host=aims-vhost
+      - solum.filter.apikeyrequestfilter.urlPath=/disable
