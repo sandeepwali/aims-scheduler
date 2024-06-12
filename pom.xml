@@ -7,7 +7,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.5</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.solum</groupId>
 	<artifactId>aims-scheduler</artifactId>
@@ -160,7 +160,7 @@
 			TokenCrendentialAuthProvider -->
 			<groupId>com.azure</groupId>
 			<artifactId>azure-identity</artifactId>
-			<version>1.12.1</version>
+			<version>1.12.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>
